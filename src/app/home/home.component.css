@@ -1,0 +1,33 @@
+:host {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: calc(100vh - 2rem);
+  flex-direction: column;
+  color: var(--text-color);
+}
+
+.heading {
+  font-size: 3rem;
+}
+
+.desc {
+  font-size: 1.05rem;
+}
+
+.btn {
+  background-color: var(--btn-color);
+  padding: 15px 10px;
+  margin: 20px 0;
+  border-radius: 10px;
+  font-size: 1.15rem;
+  width: 200px;
+  color: whitesmoke;
+  transition: all ease-in 400ms;
+  cursor: pointer;
+}
+
+.btn:hover {
+  box-shadow: 1px 1px 10px 1px rgba(0, 0, 0, 0.2);
+}

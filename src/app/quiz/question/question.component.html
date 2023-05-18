@@ -1,0 +1,15 @@
+<div class="container">
+  <p class="question" [innerHTML]="question"></p>
+  <ul class="options">
+    <li
+      [appCheck]="showAnswer"
+      [answer]="answer"
+      [correct_answer]="correct_answer"
+      class="option"
+      (click)="onSelect(option)"
+      *ngFor="let option of options"
+      [ngClass]="{ active: option === answer }"
+      [innerHtml]="option"
+    ></li>
+  </ul>
+</div>

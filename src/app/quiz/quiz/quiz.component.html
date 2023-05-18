@@ -1,0 +1,22 @@
+<div class="container">
+  <h1 class="heading">Quizzical Trivia</h1>
+  <app-question
+    *ngFor="let question of questions; let i = index"
+    [question]="question.question"
+    [options]="question.options"
+    [correct_answer]="question.correct_answer"
+    [answer]="answers[i]"
+    (selectedAnswer)="setAnswer($event, i)"
+  >
+  </app-question>
+  <button *ngIf="!(showAnswers | async)" (click)="checkAnswer()" class="btn">
+    Check Answers
+  </button>
+  <p *ngIf="correctAnswers !== undefined" class="answers">
+    You scored {{ correctAnswers }}/5 correct answers
+  </p>
+  <div class="actions" *ngIf="showAnswers | async">
+    <button (click)="newCategory()" class="btn">Select New Catgory</button>
+    <button (click)="newQuestions()" class="btn">Play Again</button>
+  </div>
+</div>

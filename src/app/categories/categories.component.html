@@ -1,0 +1,10 @@
+<h1 class="heading">Choose a Category</h1>
+<div class="container">
+  <div
+    class="category"
+    [routerLink]="['/', 'quiz', category.id]"
+    *ngFor="let category of categories"
+  >
+    {{ category.name }}
+  </div>
+</div>
